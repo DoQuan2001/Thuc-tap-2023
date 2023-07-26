@@ -131,7 +131,6 @@ Tầng vật lý là tầng thấp nhất trong mô hình 7 lớp OSI. Các th�
 ## III. CÁCH HOẠT ĐỘNG.
 
 
-
 ![hinh 5](../images/5_cach_hoat_dong(tiep).png)
 
 `
