@@ -70,13 +70,13 @@ Với markdown, văn bản sẽ được tự động chuyển sang thành các 
 
 
 ```
-![hình 1](/markdown/images/Screenshot_1.png)
+![hình 1](/.markdown/images/Screenshot_1.png)
 
 ```
 **OUT**
 
 
-
+<div style="text-align:center"><img src="/markdown/images/1_minh_hoa.png" style="width:900px"></div>
 
 ![hình 1](/markdown/images/1_minh_hoa.png)
 
