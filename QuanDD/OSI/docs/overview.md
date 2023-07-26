@@ -16,7 +16,7 @@
 
 [III. CÁCH HOẠT ĐỘNG.](#iii-cách-hoạt-động)
 
-[IV. KẾT LUẬN.](#iii-cách-hoạt-động)
+[IV. KẾT LUẬN.](#iv-kết-luận)
 
 
 <a name="1-khái-niệm"></a>
