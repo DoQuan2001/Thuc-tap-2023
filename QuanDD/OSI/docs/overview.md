@@ -25,7 +25,7 @@
 - Mô hình kết nối các hệ thống mở OSI là mô hình căn bản về các tiến trình truyền thông, thiết lập các tiêu chuẩn kiến trúc mạng ở mức Quốc tế, là cơ sở chung để các hệ thống khác nhau có thể liên kết và truyền thông được với nhau. Mô hình OSI tổ chức các giao thức truyền thông thành 7 tầng, mỗi một tầng giải quyết một phần hẹp của tiến trình truyền thông, chia tiến trình truyền thông thành nhiều tầng và trong mỗi tầng có thể có nhiều giao thức khác nhau thực hiện các nhu cầu truyền thông cụ thể.
   
 
-![hình 1](/OSI/images/1_mo_hinh.png)
+![hình 1](../images/1_mo_hinh.png)
 
 
 Mô hình OSI tuân theo các nguyên tắc phân tầng như sau:
@@ -39,7 +39,7 @@ Mô hình OSI tuân theo các nguyên tắc phân tầng như sau:
 
 ## II. LAYER.
 
-![hinh 3](/OSI/images/3_cach_hoat_dong.png)
+![hinh 3](../images/3_cach_hoat_dong.png)
 
 ### 2.1. APPLICATION.
 
@@ -107,7 +107,7 @@ Các giao thức tiêu biểu tầng Network sử dụng
 - ARP (Address Resolution Protocol)
 - RARP (Reverse Address Resolution Protocol)
 
-![hình 4](/OSI/images/4_chuc_nang_giao_thuc_network_layer.png)
+![hình 4](../images/4_chuc_nang_giao_thuc_network_layer.png)
 
 ### 2.6. DATA LINK.
 
@@ -124,7 +124,7 @@ Tầng vật lý là tầng thấp nhất trong mô hình 7 lớp OSI. Các th�
 
 
 
-![hình 2](/OSI/images/2_chuc_nang.png)
+![hình 2](../images/2_chuc_nang.png)
 
 
 
@@ -132,7 +132,7 @@ Tầng vật lý là tầng thấp nhất trong mô hình 7 lớp OSI. Các th�
 
 
 
-![hinh 5](/OSI/images/5_cach_hoat_dong(tiep).png)
+![hinh 5](../images/5_cach_hoat_dong(tiep).png)
 
 `
 Phía máy gửi:
