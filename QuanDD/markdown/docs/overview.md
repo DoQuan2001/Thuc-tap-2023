@@ -76,9 +76,8 @@ Với markdown, văn bản sẽ được tự động chuyển sang thành các 
 **OUT**
 
 
-<div style="text-align:center"><img src="/markdown/images/1_minh_hoa.png" style="width:900px"></div>
 
-![hình 1](/markdown/images/1_minh_hoa.png)
+![hình 1](../images/1_minh_hoa.png)
 
 
 ### 3.3. Danh sách
