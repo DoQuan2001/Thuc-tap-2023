@@ -235,6 +235,8 @@ Trong thực tế, OSI chỉ là là một mô hình lý thuyết của mạng.C
 
 <p>[4] http://www.trumsmarthome.com/2018/09/khai-niem-ve-mo-hinh-osi.html</p>
 
+<p>[5] https://viettechgroup.vn/tcp-ip-vs-osi-whats-the-difference-between-the-two-models.html</p>
+
 
 
 
