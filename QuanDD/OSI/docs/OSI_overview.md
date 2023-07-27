@@ -171,8 +171,7 @@ Phía máy gửi:
 
 **Bước 7**: Cuối cùng, các Frame này khi chuyển xuống tầng Physical (Tầng 1) sẽ được chuyển thành một chuỗi các bit nhị phân (0 1….) và được đưa lên cũng như phá tín hiệu trên các phương tiện truyền dẫn (dây cáp đồng, cáp quang,…) để truyền dữ liệu đến máy nhận.Mỗi gói tin dữ liệu khi được đưa xuống các tầng thì được gắn các header của tầng đó, riêng ở tầng 2 (Data Link), gói tin được gắn thêm FCS.
 
-![hinh 6](../images/8_so_do.png)
-<p style="text-align:center;">Hình 7: sơ đồ làm việc</p>
+
 
 
 
