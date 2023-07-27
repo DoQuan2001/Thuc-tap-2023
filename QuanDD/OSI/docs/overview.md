@@ -151,7 +151,6 @@ Tầng vật lý là tầng thấp nhất trong mô hình 7 lớp OSI. Các th�
 
 `
 Phía máy gửi:
-
 `
 
 **Bước 1**: Ở tầng Application (tầng 7), người dùng tiến hành đưa thông tin cần gửi vào máy tính. Các thông tin này thường có dạng như: hình ảnh, văn bản,…
