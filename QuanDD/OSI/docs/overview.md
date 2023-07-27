@@ -27,6 +27,8 @@
 
 ![hình 1](../images/1_mo_hinh.png)
 
+<p style="text-align:center;">Hình 1: Mô hình lớp mạng</p>
+
 
 Mô hình OSI tuân theo các nguyên tắc phân tầng như sau:
 
@@ -39,7 +41,10 @@ Mô hình OSI tuân theo các nguyên tắc phân tầng như sau:
 
 ## II. LAYER.
 
-![hinh 3](../images/3_cach_hoat_dong.png)
+![hinh 2](../images/3_cach_hoat_dong.png)
+
+<p style="text-align:center;">Hình 3: cách hoạt động</p>
+
 
 
 
@@ -111,6 +116,8 @@ Các giao thức tiêu biểu tầng Network sử dụng
 
 ![hình 4](../images/4_chuc_nang_giao_thuc_network_layer.png)
 
+<p style="text-align:center;">Hình 4: chức năng giao thức lớp mạng</p>
+
 ### 2.6. DATA LINK.
 
 Chức năng chủ yếu của tầng liên kết dữ liệu là thực hiện thiết lập các liên kết, duy trì và hủy bỏ các liên kết dữ liệu. Kiểm soát lỗi và kiểm soát lưu lượng.
@@ -128,6 +135,8 @@ Tầng vật lý là tầng thấp nhất trong mô hình 7 lớp OSI. Các th�
 
 ![hình 2](../images/2_chuc_nang.png)
 
+<p style="text-align:center;">Hình 5: tóm tắt chức năng lớp OSI</p>
+
 
 
 
@@ -137,10 +146,12 @@ Tầng vật lý là tầng thấp nhất trong mô hình 7 lớp OSI. Các th�
 
 ![hinh 5](../images/5_cach_hoat_dong(tiep).png)
 
-<p style="text-align:center;">Hình 5: cách hoạt động của mô hình OSI.</p>
+<p style="text-align:center;">Hình 6: cách hoạt động của mô hình OSI.</p>
+
 
 `
 Phía máy gửi:
+
 `
 
 **Bước 1**: Ở tầng Application (tầng 7), người dùng tiến hành đưa thông tin cần gửi vào máy tính. Các thông tin này thường có dạng như: hình ảnh, văn bản,…
@@ -161,6 +172,10 @@ Phía máy gửi:
 
 **Bước 7**: Cuối cùng, các Frame này khi chuyển xuống tầng Physical (Tầng 1) sẽ được chuyển thành một chuỗi các bit nhị phân (0 1….) và được đưa lên cũng như phá tín hiệu trên các phương tiện truyền dẫn (dây cáp đồng, cáp quang,…) để truyền dữ liệu đến máy nhận.Mỗi gói tin dữ liệu khi được đưa xuống các tầng thì được gắn các header của tầng đó, riêng ở tầng 2 (Data Link), gói tin được gắn thêm FCS.
 
+![hinh 6](../images/8_so_do.png)
+<p style="text-align:center;">Hình 7: sơ đồ làm việc</p>
+
+
 
 
 `
@@ -174,28 +189,29 @@ Phía máy nhận:
 **Bước 2**: Tiếp đó tầng Data Link sẽ tiến hành kiểm tra các lỗi trong frame mà bên máy gửi tạo ra bằng cách kiểm tra FCS có trong gói tin được gắn bên phía máy nhận. Nếu có lỗi xảy ra thì frame đó sẽ bị hủy bỏ. Sau đó kiểm tra địa chỉ lớp Data Link (Địa chỉ MAC Address) xem có trùng với địa chỉ của máy nhận hay không. Nếu đúng thì lớp Data Link sẽ thực hiện gỡ bỏ Header của tầng Data Link để tiếp tục chuyển lên tầng Network.
 
 
-Tầng Network sẽ tiến hành kiểm tra xem địa chỉ trong gói tin này có phải là địa chỉ của máy nhận hay không. (Lưu ý: địa chỉ ở tầng này là địa chỉ IP). Nếu đúng địa chỉ máy nhận, tầng Network sẽ gỡ bỏ Header của nó và tiếp tục chuyển đến tầng Transport để tiếp tục qui trình.
+**Bước 3**: Tầng Network sẽ tiến hành kiểm tra xem địa chỉ trong gói tin này có phải là địa chỉ của máy nhận hay không. (Lưu ý: địa chỉ ở tầng này là địa chỉ IP). Nếu đúng địa chỉ máy nhận, tầng Network sẽ gỡ bỏ Header của nó và tiếp tục chuyển đến tầng Transport để tiếp tục qui trình.
 
 
-Ở tầng Transport sẽ hỗ trợ phục hồi lỗi và xử lý lỗi bằng cách gửi các gói tin ACK, NAK (gói tin dùng để phản hồi xem các gói tin chứa dữ liệu đã được gửi đến máy nhận hay chưa?). Sau khi phục hồi sửa lỗi, tầng này tiếp tục sắp xếp các thứ tự phân đoạn và đưa dữ liệu đến tầng Session.
+**Bước 4**: Ở tầng Transport sẽ hỗ trợ phục hồi lỗi và xử lý lỗi bằng cách gửi các gói tin ACK, NAK (gói tin dùng để phản hồi xem các gói tin chứa dữ liệu đã được gửi đến máy nhận hay chưa?). Sau khi phục hồi sửa lỗi, tầng này tiếp tục sắp xếp các thứ tự phân đoạn và đưa dữ liệu đến tầng Session.
 
 
-Tầng Session làm nhiệm vụ đảm bảo các dữ liệu trong gói tin nhận được toàn vẹn. Sau đó tiến hành gỡ bỏ Header của tầng Session và tiếp tục gửi lên tầng Presentation.
+**Bước 5**: Tầng Session làm nhiệm vụ đảm bảo các dữ liệu trong gói tin nhận được toàn vẹn. Sau đó tiến hành gỡ bỏ Header của tầng Session và tiếp tục gửi lên tầng Presentation.
 
 
-Tầng Presentation sẽ xử lý gói tin bằng cách chuyển đối các định dạng dữ liệu cho phù hợp. Sau khi hoàn thành sẽ
+**Bước 6**: Tầng Presentation sẽ xử lý gói tin bằng cách chuyển đối các định dạng dữ liệu cho phù hợp. Sau khi hoàn thành sẽ
 
 
-Cuối cùng, tầng Application tiến hành xử lý và gỡ bỏ Header cuối cùng. Khi đó ở máy nhận sẽ nhận được dữ liệu của gói tin được truyền đi.
-
-
-
-![hinh 6](../images/6_workflow.png)
-
-<p style="text-align:center;">Hình 6: Workflow OSI</p>
+**Bước 7**: Cuối cùng, tầng Application tiến hành xử lý và gỡ bỏ Header cuối cùng. Khi đó ở máy nhận sẽ nhận được dữ liệu của gói tin được truyền đi.
 
 
 
+![hinh 7](../images/6_workflow.png)
+
+<p style="text-align:center;">Hình 7: Workflow OSI</p>
+
+![hinh 8](../images/7_Dong_goi_du_lieu.png)
+
+<p style="text-align:center;">Hình 8: Đóng gói dữ liệu</p>
 
 
 ## IV. KẾT LUẬN.
