@@ -67,6 +67,19 @@ Lớp vận chuyển cũng cung cấp các dịch vụ khác như phân đoạn,
 
 Trong tầng này còn bao gồm 2 giao thức cốt lõi là TCP và UDP. Trong đó, TCP đảm bảo chất lượng gói tin nhưng tiêu tốn thời gian khá lâu để kiểm tra đầy đủ thông tin từ thứ tự dữ liệu cho đến việc kiểm soát vấn đề tắc nghẽn lưu lượng dữ liệu. Trái với điều đó, UDP cho thấy tốc độ truyền tải nhanh hơn nhưng lại không đảm bảo được chất lượng dữ liệu được gửi đi.
 
+![Hình 3](../images/3_TCP.png)
+
+<p style="text-align:center;">Hình 3: Bản tin TCP</p>
+
+![Hình 4](../images/4_UDP.png)
+
+<p style="text-align:center;">Hình 4: Bản tin UDP</p>
+
+![Hình 5](../images/5_so_sanh_UDP_TCP.png)
+
+<p style="text-align:center;">Hình 5: so sánh UDP&TCP</p>
+
+
 ### 2.3 LỚP MẠNG.
 
 Lớp Internet trong kiến trúc giao thức TCP/IP là lớp định tuyến, đảm bảo việc đưa các gói tin đến đúng đích trên mạng. Lớp Internet cũng đảm bảo tính toàn vẹn của dữ liệu trong quá trình định tuyến và hỗ trợ việc phân đoạn và gộp các phân đoạn của các gói tin lớn. Lớp này sử dụng giao thức Internet Protocol (IP) để định tuyến các gói tin trên mạng.
@@ -84,22 +97,27 @@ Nhiệm vụ của lớp vật lý là định nghĩa các đặc tính cơ bả
 
 Các chuẩn và giao thức phổ biến trong lớp vật lý bao gồm Ethernet, Token Ring, ATM (Asynchronous Transfer Mode), ISDN (Integrated Services Digital Network), và FDDI (Fiber Distributed Data Interface). Mỗi chuẩn và giao thức này sử dụng các kỹ thuật và thiết bị khác nhau để truyền tải dữ liệu trên mạng vật lý.
 
+![Hình 5](../images/5_giao_thuc_lop_tcp_ip.png)
+
+<p style="text-align:center;">Hình 5:CÁC GIAO THỨC TRONG TCP/IP</p>
+
+
 ## III. SO SÁNH VỚI MÔ HÌNH OSI.
 
 ### 3.1 GIỚI THIỆU QUA VỀ MÔ HÌNH OSI.
 
 Mô hình kết nối các hệ thống mở OSI là mô hình căn bản về các tiến trình truyền thông, thiết lập các tiêu chuẩn kiến trúc mạng ở mức Quốc tế, là cơ sở chung để các hệ thống khác nhau có thể liên kết và truyền thông được với nhau. Mô hình OSI tổ chức các giao thức truyền thông thành 7 tầng, mỗi một tầng giải quyết một phần hẹp của tiến trình truyền thông, chia tiến trình truyền thông thành nhiều tầng và trong mỗi tầng có thể có nhiều giao thức khác nhau thực hiện các nhu cầu truyền thông cụ thể.
 
-![Hình 3 ](../images/3_mo_hinh_OSI.png)
+![Hình 6 ](../images/6_mo_hinh_OSI.png)
 
-<p style="text-align:center;">Hình 3: MÔ HÌNH OSI </p>
+<p style="text-align:center;">Hình 6: MÔ HÌNH OSI </p>
 
 
 ### 3.2. SO SÁNH MÔ HÌNH OSI VÀ TCP/IP.
 
-![Hinh 4](../images/4_so_sanh_osi_tcpip.png)
+![Hinh 7](../images/7_so_sanh_osi_tcpip.png)
 
-<p style="text-align:center;">Hình 4: SO SÁNH MÔ HÌNH OSI & TCP/IP </p>
+<p style="text-align:center;">Hình 7: SO SÁNH MÔ HÌNH OSI & TCP/IP </p>
 
 Tầng ứng dụng trong mô hình TCP/IP bao gồm luôn cả 3 tầng trên của mô hình OSI. Tầng giao vận trong mô hình TCP/IP không phải luôn đảm bảo độ tin cậy của việc truyền tin như ở trong tầng giao vận của OSI mà cho phép thêm một lựa chọn khác là UDP.
 
@@ -111,9 +129,9 @@ Tầng ứng dụng trong mô hình TCP/IP bao gồm luôn cả 3 tầng trên c
 
 **``sự khác nhau``**:
 
-![Hinh 5](../images/5_bang_so_sanh.png)
+![Hinh 8](../images/8_bang_so_sanh.png)
 
-<p style="text-align:center;">Hình 5: SO SÁNH MÔ HÌNH OSI & TCP/IP </p>
+<p style="text-align:center;">Hình 8: SO SÁNH MÔ HÌNH OSI & TCP/IP </p>
 
 
 ### 3.3. NÊN CHỌN TCP/IP HAY OSI?
@@ -129,6 +147,9 @@ Các giao thức TCP/IP sẽ được thiết kế trước, còn mô hình sẽ
 
 ## IV. CÁCH HOẠT ĐỘNG.
 
+***Bước 1***: Ở tầng Application (tầng 4), người dùng tiến hành đưa thông tin cần gửi vào máy tính. Các thông tin này thường có dạng như: hình ảnh, văn bản,… Dữ liệu sẽ đi theo luồng được gọi là stream.
+
+***Bước 2***: Sau khi nhận dữ liệu từ tầng Application đẩy xuống tầng Transport, dữ liệu được phân đoạn thành các segment. Ở tầng này có 2 giao thức là TCP và UDP. gói tin sẽ sử dụng 1 trong 2 giao thức này:
 
 ***NẾU LÀ TCP***
 
@@ -139,7 +160,7 @@ tới server
 
 Chỉ định seq # ban đầu
 
- Không có dữ liệu
+Không có dữ liệu
 
 Bước 2: Server nhận SYN, trả lời với 
 SYNACK segment:
@@ -152,6 +173,10 @@ Bước 3: Client nhận SYNACK, trả lời
 bằng ACK segment, có thể chứa 
 dữ liệu
 
+![Hình 9](../images/9_thiet_lap_ket_noi.png)
+
+<p style="text-align:center;">Hình 9: thiết lập kết nối</p>
+
 -  Giai phóng kết nối:
 
 Bước 1: client gửi TCP FIN tới 
@@ -161,15 +186,36 @@ Bước 2: server nhận FIN, trả lời
 bằng ACK. Đóng kết nối, gửi 
 FIN.
 
-***NẾU LÀ UDP***
+Bước 3: client nhận FIN, trả lời
+bằng ACK.
+
+Thời gian đợi: trả lời bằng
+ACK báo đã nhận FIN
+
+Bước 4: server, nhận ACK. Kết
+nối đóng. 
+
+![Hình 10](../images/10_giai_phong_ket_noi.png)
+
+<p style="text-align:center;">Hình 10: giải phóng kết nối</p>
+
+***Bước 3***: Tiếp đó, dữ liệu sẽ được chuyển xuống tầng Network (Tầng 3). Ở tầng này, các segment lại tiếp tục được cắt ra thành nhiều gói Package khác nhau và bổ sung thông tin định tuyến. Tầng Network này chức năng chính của nó là định tuyến đường đi cho gói tin chứa dữ liệu.
+
+***Bước 4***: Ở tầng network access, tầng này chính là tầng datalink và tầng physical ở mô hình osi.
+
+Dữ liệu tiếp tục được chuyển xuống tầng Data Link (tầng 2). Tại tầng này, mỗi Package sẽ được băm nhỏ ra thành nhiều Frame và bổ sung thêm các thông tin kiểm tra gói tin chứa dữ liệu để kiểm tra ở máy nhận.
+
+Cuối cùng, các Frame này khi chuyển xuống tầng Physical (Tầng 1) sẽ được chuyển thành một chuỗi các bit nhị phân (0 1….) và được đưa lên cũng như phá tín hiệu trên các phương tiện truyền dẫn (dây cáp đồng, cáp quang,…) để truyền dữ liệu đến máy nhận.Mỗi gói tin dữ liệu khi được đưa xuống các tầng thì được gắn các header của tầng đó, riêng ở tầng 2 (Data Link), gói tin được gắn thêm FCS.
+
+![Hình 11](../images/11_WORKFLOW.png)
+
+<p style="text-align:center;">Hình 11: workflow</p>
 
 
 
+## V. LỜI KẾT.
 
-
-
-
-## V. KẾT LUẬN.
+Bài viết đã giới thiệu qua mô hình TCP/IP, các lớp và chức năng của từng lớp trong mô hình. mong rằng bài viết này có thể giúp mọi người nắm rõ được kiến thức cũng như giúp ích các bạn trong ngành học và công việc.
 
 ---
 *Danh mục tài liệu tham khảo*
@@ -184,7 +230,11 @@ FIN.
 
 <p>[5] vhttps://wiki.matbao.net/tcp-ip-la-gi-uu-va-nhuoc-diem-cua-tcp-ip-so-voi-mo-hinh-osi/ </p>
 
-<p> </p>
+<p>[6] https://viettuts.vn/lap-trinh-mang-voi-java/giao-thuc-tcp-ip</p>
+
+<p>[7] https://vnpro.vn/tin-tuc/gioi-thieu-tong-quan-ve-bogiao-thuc-tcpip-1103.html </p>
+
+<p>[8] slide "kỹ thuật mạng truyền thông"-Phạm Anh Thư-Khoa VT1-PTIT </p>
 
 
 
