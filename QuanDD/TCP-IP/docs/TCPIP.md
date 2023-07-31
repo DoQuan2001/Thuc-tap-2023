@@ -156,18 +156,18 @@ Các giao thức TCP/IP sẽ được thiết kế trước, còn mô hình sẽ
 -  THIẾT LẬP KẾT NỐI.
 
 Bước 1: Client gửi TCP SYN segment 
-tới server
+tới server:
 
-Chỉ định seq # ban đầu
++Chỉ định seq # ban đầu
 
-Không có dữ liệu
++Không có dữ liệu
 
 Bước 2: Server nhận SYN, trả lời với 
 SYNACK segment:
 
-Server cấp phát buffer
++Server cấp phát buffer
 
-Server khởi tạo seq. #
++Server khởi tạo seq. #
 
 Bước 3: Client nhận SYNACK, trả lời 
 bằng ACK segment, có thể chứa 
