@@ -22,9 +22,9 @@
 
 - [3.3 NÊN CHỌN OSI HAY TCP/IP](#33-nên-chọn-tcpip-hay-osi)
 
-[IV. CÁCH HOẠT ĐỘNG]()
+[IV. CÁCH HOẠT ĐỘNG](#iv-cách-hoạt-động)
 
-[V. KẾT LUẬN]()
+[V. LỜI KẾT](#v-lời-kết)
 
 
 
