@@ -109,7 +109,8 @@ Cách tính:
  + Số subnet có thể chia được: 
        2^n nếu có hỗ trợ subnet – zero. 
        2^n– 2 nếu không hỗ trợ subnet – zero. 
-Luật subnet – zero: nếu hệ điều hành trên host không bật tính năng subnet – zero, khi chia subnet ta phải bỏ đi không dùng hai mạng con ứng với các bit subnet bằng 0 hết và các bit subnet bằng 1 hết. Ngược lại nếu hệ điều hành bật tính năng subnet – zero , ta có quyền sử dụng hai mạng con này. Nhìn chung, các hệ điều hành ngày nay đều bật tính năng subnet – zero một cách mặc định, do đó nếu không thấy nói gì thêm trong yêu cầu, ta sử dụng cách chia có hỗ trợ subnet – zero. 
+Luật subnet – zero: nếu hệ điều hành trên host không bật tính năng subnet – zero, khi chia subnet ta phải bỏ đi không dùng hai mạng con ứng với các bit subnet bằng 0 hết và các bit subnet bằng 1 hết. 
+Ngược lại nếu hệ điều hành bật tính năng subnet – zero , ta có quyền sử dụng hai mạng con này. Nhìn chung, các hệ điều hành ngày nay đều bật tính năng subnet – zero một cách mặc định, do đó nếu không thấy nói gì thêm trong yêu cầu, ta sử dụng cách chia có hỗ trợ subnet – zero. 
  + Số host có thể có trên mỗi subnet: 2^m – 2 (host/subnet).
 
  - Với mỗi subnet chia được: 
