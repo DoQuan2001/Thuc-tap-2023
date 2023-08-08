@@ -11,7 +11,9 @@
 
 [III. KỸ THUẬT CHIA VLSM.](#iii-kỹ-thuật-chia-vlsm)
 
-[VI. MỘT SỐ BÀI TẬP CHIA MẠNG CON.](#vi-một-số-bài-tập-chia-mạng-con)
+[IV. PHÂN HOẠCH CIDR](#iv-phân-hoạch-cidr)
+
+[V. MỘT SỐ BÀI TẬP CHIA MẠNG CON.](#v-một-số-bài-tập-chia-mạng-con)
 
 ## I. MỘT SỐ KHÁI NIỆM.
 
@@ -91,6 +93,48 @@ Thực hiện 3 bước:
 - Bước 3: Xác định các vùng địa chỉ cho host.
 
 
+### 2.3 MỘT SỐ DẠNG BÀI TẬP.
+
+**DẠNG 1**: Cho một mạng lớn và số bit mượn. Xác định :
+- Số subnet 
+- Số host/subnet 
+- Địa chỉ mạng của mỗi subnet. 
+- Địa chỉ host đầu của mỗi subnet. 
+- Địa chỉ host cuối của mỗi subnet. 
+- Địa chỉ broadcast của mỗi subnet. 
+- Subnet mask được sử dụng
+```
+Cách tính: 
+- Gọi n là số bit mượn và m là số bit host còn lại. Ta có: 
+ + Số subnet có thể chia được: 
+       2^n nếu có hỗ trợ subnet – zero. 
+       2^n– 2 nếu không hỗ trợ subnet – zero. 
+Luật subnet – zero: nếu hệ điều hành trên host không bật tính năng subnet – zero, khi chia subnet ta phải bỏ đi không dùng hai mạng con ứng với các bit subnet bằng 0 hết và các bit subnet bằng 1 hết. Ngược lại nếu hệ điều hành bật tính năng subnet – zero , ta có quyền sử dụng hai mạng con này. Nhìn chung, các hệ điều hành ngày nay đều bật tính năng subnet – zero một cách mặc định, do đó nếu không thấy nói gì thêm trong yêu cầu, ta sử dụng cách chia có hỗ trợ subnet – zero. 
+ + Số host có thể có trên mỗi subnet: 2^m – 2 (host/subnet).
+
+ - Với mỗi subnet chia được: 
++ Địa chỉ mạng có octet bị chia cắt là bội số của bước nhảy (Octet bị chia cắt là octet vừa có các bit thuộc phần mạng vừa có các bit thuộc phần host). Bước nhảy tương ứng với số bit mượn có thể được tra trong bảng dưới đây. 
++ Địa chỉ host đầu = địa chỉ mạng + 1 (cần hiểu cộng 1 ở đây là lùi về sau một địa chỉ). 
++ Địa chỉ broadcast = địa chỉ mạng kế tiếp – 1 (cần hiểu trừ 1 ở đây là lùi về phía trước một địa chỉ). 
++ Địa chỉ host cuối = địa chỉ broadcast – 1 (cần hiểu trừ 1 ở đây là lùi vềphía trước một địa chỉ).
+
+ - Để tính ra subnet mask được sử dụng, ta sử dụng cách nhớ: phần mạng của địa chỉ chạy đến đâu, các bit 1 của subnet mask chạy đến đó
+
+```
+
+![Hình: ](../images/22_bang_buoc_nhay.png)
+
+
+**DẠNG 2**: Cho một địa chỉ host. Xác định xem host thuộc mạng nào?
+
+VD1: Cho địa chỉ host 192.168.1.158/28. Hãy cho biết, host này thuộc về subnet nào? 
+Giải: /28 => có 28 bit mạng. Octet bị chia cắt là octet thứ 4 => só bit mượn của octet này là 4 => bước nhảy là 16. Lấy octet thứ 4 của địa chỉ host là 158 chia cho 16 được 9 và còn dư. Ta lấy 16 nhân với 9 được 144. Host này thuộc mạng 192.168.1.144/28
+
+
+
+
+
+
 ## III. KỸ THUẬT CHIA VLSM.
 
 
@@ -123,9 +167,64 @@ kết luận: Như vậy tại HCM giá trị subnetmask là /25, cần thơ v�
 ```
 
 
+## IV. PHÂN HOẠCH CIDR.
+
+### 4.1 KHÁI NIỆM.
+
+Định tuyến liên miền không phân lớp (CIDR) là phương pháp phân bổ địa chỉ IP có khả năng cải thiện hiệu quả việc định tuyến dữ liệu trên Internet. Mỗi máy, máy chủ và thiết bị người dùng cuối kết nối với Internet đều đi kèm với một mã số duy nhất, được gọi là địa chỉ IP. Các thiết bị tìm và giao tiếp với nhau bằng cách sử dụng các địa chỉ IP này. Các tổ chức sử dụng CIDR để phân bổ địa chỉ IP một cách linh hoạt và hiệu quả trong mạng của họ.
+
+Các nhà cung cấp dịch vụ được cấp phát những 
+block các địa chỉ IPv4 
+
+Nhà cung cấp này sau đó dùng CIDR để cấp 
+phát lại địa chỉ cho khách hàng theo những 
+chính sách riêng của họ. Ví dụ, nếu mạng con 
+yêu cầu nhiều hơn 254 địa chỉ host, có thể gán 
+cho mạng đó một địa chỉ /23 thay vì phung phí 
+toàn bộ cả địa chỉ lớp B, hỗ trợ đến 65,534 
+host.
 
 
-## VI. MỘT SỐ BÀI TẬP CHIA MẠNG CON.
+Các nhà cung cấp dịch vụ được cấp phát những 
+block các địa chỉ IPv4 
+
+
+Ví dụ cho địa chỉ mạng CIDR: 192.168.54.0/23
+
+### 4.2 LỢI ÍCH.
+
+
+- Giảm thiểu lãng phí địa chỉ IP
+
+CIDR cung cấp sự linh hoạt khi bạn xác định mạng và mã định danh máy chủ gán trên một địa chỉ IP. Bạn có thể sử dụng CIDR để cung cấp số lượng địa chỉ IP cần thiết cho một mạng cụ thể và giảm thiểu lãng phí. Bên cạnh đó, CIDR cũng giảm thiểu số lượng mục bảng định tuyến và đơn giản hóa việc định tuyến gói dữ liệu. 
+
+- Truyền dữ liệu nhanh
+
+CIDR cho phép các bộ định tuyến tổ chức địa chỉ IP thành nhiều mạng con một cách hiệu quả hơn. Một mạng con là một mạng nhỏ hơn tồn tại trong một mạng lớn hơn. Ví dụ: tất cả các thiết bị được kết nối với một bộ định tuyến đều nằm trong cùng một mạng con và có cùng tiền tố địa chỉ IP.
+
+Với CIDR, tổ chức của bạn có thể tạo ra và hợp nhất nhiều mạng con. Điều này cho phép dữ liệu đến được địa chỉ đích mà không cần đi qua các đường dẫn không cần thiết. 
+
+- Tạo một Đám mây riêng ảo
+
+Đám mây riêng ảo (VPC) là một không gian kỹ thuật số riêng được lưu trữ trong đám mây. VPC cho phép tổ chức của bạn cung cấp khối lượng công việc trong một môi trường biệt lập và an toàn. Một VPC sẽ sử dụng địa chỉ IP CIDR khi truyền các gói dữ liệu giữa các thiết bị được kết nối. 
+
+- Tạo các siêu mạng một cách linh hoạt
+
+Một siêu mạng là một nhóm các mạng con có tiền tố mạng giống nhau. CIDR cho phép tạo các siêu mạng một cách linh hoạt, điều này không thể thực hiện được trong kiến trúc mặt nạ thông thường. Ví dụ: tổ chức của bạn có thể kết hợp các địa chỉ IP thành một khối mạng duy nhất bằng cách sử dụng ký hiệu như sau:
+
+  - 192.168.1 /23 
+  - 192.168.0 /23
+
+Ký hiệu này áp dụng mặt nạ mạng con 255.255.254.0 vào địa chỉ IP, mặt nạ mạng con này trả về 23 bit đầu tiên là địa chỉ mạng. Bộ định tuyến sẽ chỉ cần một mục bảng định tuyến để quản lý các gói dữ liệu giữa các thiết bị trong mạng con.
+
+
+
+
+
+
+
+
+## V. MỘT SỐ BÀI TẬP CHIA MẠNG CON.
 
 **bài 1:**Cho mạng và số bit mượn. Giả sử có hỗ trợ subnet zero. Hãy xác định : 
 - Số subnet có thể có. 
@@ -248,7 +347,7 @@ b) 172.16.16.0/24
 
 <p>[3] bài giảng chia IP- trung tâm tin học VNPRO </p>
 
-<p>[4] </p>
+
 
 
 

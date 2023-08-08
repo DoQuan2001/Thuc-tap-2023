@@ -239,8 +239,7 @@ lớp, còn lại 22 bit cho phép ta đánh thứ tự 2 mũ 22 mạng khác nh
 Public IP là địa chỉ được ISP (nhà cung cấp dịch vụ Internet) cấp và có thế được "nhìn thấy" và truy cập từ Internet. Giống như địa chỉ nhà dùng để nhận thư tín, bưu phẩm vậy. Mỗi public IP chỉ tồn tại độc nhất trên mạng Internet cho cả toàn cầu, vì đó không thể tồn tại hai thiết bị (server, máy tính, router,...) có cùng địa chỉ public IP.
 
 
-Một public IP có thể là tĩnh (static) hoặc động (dynamic) tùy theo loại dịch vụ của người dùng. Một địa chỉ public IP tĩnh không thay đổi và thường được dùng cho hosting các trang web, hoặc dịch vụ trên Internet. Mặt khác, địa chỉ động được chọn từ một "hồ chứa" các địa chỉ có sẵn và thay đổi mỗi lần người dùng kết nối đến Internet.
-Đa số ISPs hiện nay cung cấp địa chỉ IP động cho người dùng!
+Một public IP có thể là tĩnh (static) hoặc động (dynamic) tùy theo loại dịch vụ của người dùng. Một địa chỉ public IP tĩnh không thay đổi và thường được dùng cho hosting các trang web, hoặc dịch vụ trên Internet. Mặt khác, địa chỉ động được chọn từ một "hồ chứa" các địa chỉ có sẵn và thay đổi mỗi lần người dùng kết nối đến Internet.Đa số ISPs hiện nay cung cấp địa chỉ IP động cho người dùng!
 
 
 _Lưu ý: Địa chỉ public phải là duy nhất cho mỗi host tham gia vào Internet_
