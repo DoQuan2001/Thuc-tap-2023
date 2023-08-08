@@ -15,6 +15,10 @@
 
 [V. MỘT SỐ BÀI TẬP CHIA MẠNG CON.](#v-một-số-bài-tập-chia-mạng-con)
 
+[VI. KẾT LUẬN.](#vi-kết-luận)
+
+
+
 ## I. MỘT SỐ KHÁI NIỆM.
 
 _Đặt vấn đề_: Trong khi nguồn tài nguyên IP dần cạn kiệt, mà trong một hệ thống, rất khó sử dụng hết toàn bộ địa chỉ IP khả dụng của một lớp IP. Điều này gây lãng phí không gian địa chỉ rất lớn. Do đó vấn đề đặt ra là phải chia từng lớp mạng này thành những lớp mạng nhỏ hơn có số IP phù hợp với nhu cầu sử dụng hợp lý.Sự phân chia này còn giúp người quản trị dễ dàng hơn trong việc quản lý, bảo mật dữ liệu đồng thời giảm tải cho các thiết bị định tuyến.
@@ -334,6 +338,14 @@ b) 172.16.16.0/24
  b) tương tự: 172.16.16.0/22.
  
  ```
+
+## VI. KẾT LUẬN.
+
+Trên hết, việc chia địa chỉ IPv4 và chia subnet là một khía cạnh quan trọng trong quản lý mạng và viễn thông. Trong bài viết này, chúng ta đã tìm hiểu về quá trình chia địa chỉ IPv4 thành các mạng con nhỏ hơn, cũng như cách sử dụng subnet mask để xác định địa chỉ mạng và địa chỉ máy con.
+
+Tuy nhiên, việc chia địa chỉ IPv4 và chia subnet cũng có thể gặp phải một số thách thức. Sự thiếu hụt địa chỉ IPv4 đã gây ra sự cần thiết chuyển sang IPv6, với không gian địa chỉ rộng hơn và khả năng hỗ trợ nhiều thiết bị hơn. Điều này đòi hỏi sự chuyển đổi và quản lý song song của cả hai phiên bản.
+
+Tóm lại, việc chia địa chỉ IPv4 và chia subnet đóng vai trò quan trọng trong việc tạo ra các mạng con và quản lý mạng hiệu quả. Việc hiểu và áp dụng các khái niệm chia subnet giúp chúng ta tận dụng tối đa không gian địa chỉ và tạo ra mạng con linh hoạt và bảo mật. Trong tương lai, với sự phát triển của IPv6, việc chia địa chỉ và quản lý subnet sẽ tiếp tục đóng vai trò quan trọng trong việc xây dựng và duy trì hạ tầng mạng.
 
 
 

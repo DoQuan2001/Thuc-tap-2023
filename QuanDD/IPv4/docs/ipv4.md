@@ -17,6 +17,8 @@
 
 [VII. MỘT SỐ BÀI TẬP](#vii-bài-tập)
 
+[VIII. KẾT LUẬN](#viii-kết-luận)
+
 
 
 
@@ -326,7 +328,17 @@ G. 224.156.217.73: địa chỉ lớp D(Multicast) => không dùng cho host
 
 
 
+## VIII. KẾT LUẬN.
 
+Địa chỉ IPv4 đóng vai trò quan trọng trong việc xác định và định vị các thiết bị kết nối Internet. Với tổng cộng 4,3 tỷ địa chỉ có thể sử dụng, IPv4 đã đáp ứng nhu cầu kết nối trong nhiều năm qua. Tuy nhiên, việc tăng trưởng không ngừng của Internet đã dẫn đến tình trạng cạn kiệt địa chỉ IPv4.
+
+Để đáp ứng nhu cầu kết nối ngày càng tăng, IPv6 đã được phát triển với một không gian địa chỉ rộng hơn và khả năng hỗ trợ hàng tỷ thiết bị. Mặc dù IPv6 đang dần trở nên phổ biến, IPv4 vẫn tiếp tục tồn tại và được sử dụng rộng rãi, và việc hiểu về nó là quan trọng trong việc quản lý mạng.
+
+Trên hết, việc nắm vững cấu trúc và nguyên tắc hoạt động của địa chỉ IPv4 sẽ giúp chúng ta hiểu rõ hơn về quy trình kết nối mạng và vấn đề liên quan đến địa chỉ IP. Địa chỉ IPv4 không chỉ là một con số, mà là một phần quan trọng của cơ sở hạ tầng Internet mà chúng ta sử dụng hàng ngày.
+
+Trong tương lai, việc chuyển đổi từ IPv4 sang IPv6 sẽ tiếp tục diễn ra, và việc hiểu về cả hai phiên bản sẽ trở nên ngày càng cần thiết. Việc sử dụng địa chỉ IPv4 và IPv6 một cách hiệu quả và bảo vệ chúng khỏi các vấn đề bảo mật là một thách thức đối với các nhà quản trị hệ thống và mạng.
+
+Tóm lại, địa chỉ IPv4 đóng vai trò quan trọng trong việc xác định và kết nối các thiết bị trên mạng Internet. Việc hiểu về cấu trúc và quản lý địa chỉ IPv4 là một phần thiết yếu để đảm bảo sự liên lạc và kết nối hiệu quả trong thế giới kỹ thuật số ngày nay.
 
 
 
