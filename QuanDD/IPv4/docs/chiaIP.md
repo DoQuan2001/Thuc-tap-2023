@@ -257,6 +257,7 @@ GIẢI:
 ![Hình: ](../images/19_giai.jpg)
 ![Hình: ](../images/20_giai.jpg)
 ![Hình: ](../images/21-giai.jpg)
+![Hình: ](../images/23_giai.jpg)
 
 
 
