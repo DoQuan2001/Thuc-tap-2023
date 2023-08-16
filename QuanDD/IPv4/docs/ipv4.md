@@ -212,6 +212,17 @@ lớp, còn lại 22 bit cho phép ta đánh thứ tự 2 mũ 22 mạng khác nh
 - Lớp D được dành cho phát các thông tin (multicast/broadcast).
 
 
+Địa chỉ Unicast sẽ gửi dữ liệu từ một thiết bị đến một nơi nhận duy nhất. 
+
+Địa chỉ Multicast sẽ gửi dữ liệu đến 1 nhóm (tập hợp) host được xác định trước.
+
+ Địa chỉ Broadcast sẽ gửi dữ liệu đến tất cả các thiết bị kết nối cùng mạng.
+
+![Hình: ](../images/24_phanbiet.png)
+
+<p style="text-align:center">Hình : phân biệt mulyicat và broadcast</p>
+
+
 ### 5.5. LỚP E.
 
 - Lớp E có 4 bit đầu tiên luôn là 1111. 
@@ -219,6 +230,9 @@ lớp, còn lại 22 bit cho phép ta đánh thứ tự 2 mũ 22 mạng khác nh
 - Nó sẽ có địa chỉ từ 240.0.0.0 đến 254.255.255.255.
 
 - Lớp E được dành riêng cho việc nhiên cứu. 
+
+
+
 
 ### 5.6. MỘT SỐ DẠNG ĐỊA CHỈ IP ĐẶC BIỆT.
 
