@@ -1,5 +1,15 @@
 # VLAN TRUNKING-OVERVIEW.
 
+# MỤC LỤC.
+
+[I. KHÁI NIỆM.](#i-khái-niệm)
+
+[II. CÁC CHUẨN VTP.](#ii-các-chuẩn-vtp)
+
+[III. CÁCH HOẠT ĐỘNG.](#iii-cách-hoạt-động)
+
+[IV. CÁC CHẾ ĐỘ HOẠT ĐỘNG.](#iv-các-chế-độ-hoạt-động)
+
 ## I. KHÁI NIỆM.
 
 ### 1.1. VTP.

@@ -1,5 +1,17 @@
 # VLAN-OVERVIEW.
 
+# MỤC LỤC 
+
+[I. MỘ SỐ KHÁI NIỆM.](#i-mộ-số-khái-niệm)
+
+[II. CẤU TRÚC HOẠT ĐỘNG.](#ii-cấu-trúc-hoạt-động)
+
+[III. LỢI ÍCH KHI DÙNG VLAN.](#iii-lợi-ích-khi-dùng-vlan)
+
+[IV. PHÂN LOẠI VLAN.](#iv-cách-hoạt-động)
+
+[V.  ĐƯỜNG ACCESS VÀ ĐƯỜNG TRUNKING](#v-đường-access-và-đường-trunking)
+
 ## I. MỘ SỐ KHÁI NIỆM.
 
 ### 1.1. LAN LÀ GÌ?
@@ -76,11 +88,11 @@ Các khung Ethernet được gắn thẻ sẽ chuyển tiếp về địa chỉ 
 Spanning Tree Protocol ( STP )là một giao thức được dùng để ngăn chặn sự lặp vòng giữa các switch trong mỗi miền lớp 2 (Ethernet). Mỗi VLAN sẽ chạy một STP riêng biệt, không phụ thuộc lẫn nhau. Nếu cấu trúc liên kết giữa nhiều VLAN giống nhau thì có thể chạy STP đa trường hợp để giảm chi phí STP.
 
 
-## V. GIAO THỨC SỬ DỤNG 
 
 
 
-## Vi. ĐƯỜNG ACCESS VÀ ĐƯỜNG TRUNKING
+
+## V. ĐƯỜNG ACCESS VÀ ĐƯỜNG TRUNKING
 
 ![hình ](../images/4_access_trunking.png)
 
@@ -127,5 +139,7 @@ Spanning Tree Protocol ( STP )là một giao thức được dùng để ngăn c
 [2] https://www.daihockhonggiay.com/blogs/post/gioi-thieu-ve-vlan#:~:text=Tr%C3%AAn%20m%E1%BB%99t%20Switch%20v%E1%BA%ADt%20l%C3%BD,c%C3%B3%20c%E1%BB%95ng%20t%E1%BB%AB%2016%2D24.
 
 [3] https://bkhost.vn/blog/vlan/
+
+[4] https://sss.net.vn/cau-hinh-intervlan-vlan-routing-tren-switch-cisco-c3650c3850c9300
 
 
