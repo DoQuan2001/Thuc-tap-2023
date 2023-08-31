@@ -88,7 +88,6 @@ Có 3 loại địa chỉ IPv6:
 
 lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 
-### 4.1. UNICAST.
 
 
 

@@ -3,6 +3,11 @@
 Topo:
 ![hình](../images/14_topo.png)
 
+
+QUY HOẠCH:
+
+![hinh ](../images/8_quy_hoach.png)
+
 ## bước 1: tạo ra 3 vlan 10,20,30:
 
 ```
