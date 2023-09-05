@@ -1,5 +1,28 @@
 # TÌM HIỂU VỀ IP VERSION 6
 
+## MỤC LỤC.
+
+[I. IPv6 LÀ GÌ?](#i-ipv6-là-gì)
+
+[II. MỤC ĐÍCH TẠO RA IP V6.](#ii-mục-đích-tạo-ra-ip-v6)
+
+[III. LỢI ÍCH KHI SỬ DỤNG IP V6.](#iii-lợi-ích-khi-sử-dụng-ip-v6)
+
+[IV. CẤU TRÚC IPv6.](#iv-cấu-trúc-ipv6)
+
+- [4.1. BIỂU DIỄN IP V6.](#41-biểu-diễn-ip-v6)
+
+- [4.2. THÀNH PHẦN IP V6.](#42-thành-phần-ip-v6)
+
+[V. CÁC LOẠI ĐỊA CHỈ IPv6.](#v-các-loại-địa-chỉ-ipv6)
+
+
+
+
+
+
+
+
 ## I. IPv6 LÀ GÌ?
 
 IPv6 là phiên bản tiếp theo của giao thức Internet Protocol (IP), mà được sử dụng để điều hướng gói tin trên mạng Internet. Nó được thiết kế để thay thế cho IPv4, giao thức hiện tại được sử dụng rộng rãi nhất trên thế giới.
@@ -23,9 +46,9 @@ Hỗ trợ tính năng multicast và anycast, giúp cho việc truyền tin trê
 
 - Hỗ trợ các thiết bị không dây và các hệ thống không dây, giúp cho việc kết nối và trao đổi dữ liệu trên mạng không dây được thuận tiện hơn.
 
-## III. CẤU TRÚC IPv6.
+## IV. CẤU TRÚC IPv6.
 
-###     3.1. BIỂU DIỄN IP V6.
+###     4.1. BIỂU DIỄN IP V6.
 
 ![hinh ](../images/1_cau_truc.png)
 IP v6 gồm 128 bit được chia thành 8 HEXTET. mỗi HEXTET là 16 bit ngăn cách nhau bởi dấu ":".
@@ -41,14 +64,14 @@ IP v6 gồm 128 bit được chia thành 8 HEXTET. mỗi HEXTET là 16 bit ngăn
  ![hinh](../images/2_vi_du.png)
 
 
-### 3.2. THÀNH PHẦN IP V6.
+### 4.2. THÀNH PHẦN IP V6.
 
 IP V6 cũng giồm 2 phần: NET VÀ HOST.
 
 ![hinh ](../images/3_host_net.png)
 
 
-#### 3.2.1. PHẦN NET ID.
+#### 4.2.1. PHẦN NET ID.
 
 phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần này như sau:
 
@@ -60,7 +83,7 @@ phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần nà
 
 - lúc này bạn chỉ cần quan tâm tới phần host là cái attach nó vào máy.
 
-#### 3.2.2. PHẦN HOST ID.
+#### 4.2.2. PHẦN HOST ID.
 
 đây là cái hay nhất của IPV6 bởi IPv6 không có private IP, mà tất cả địa chỉ IPv6 đều là public IP.
 
@@ -76,7 +99,7 @@ phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần nà
 ví dụ: 
 ![HINH ](../images/6_host_id.png)
 
-## IV. CÁC LOẠI ĐỊA CHỈ IPv6.
+## V. CÁC LOẠI ĐỊA CHỈ IPv6.
 
 ![hinh ](../images/7_ipv6_category.png)
 
