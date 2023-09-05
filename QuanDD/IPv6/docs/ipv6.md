@@ -78,15 +78,18 @@ ví dụ:
 
 ## IV. CÁC LOẠI ĐỊA CHỈ IPv6.
 
+![hinh ](../images/7_ipv6_category.png)
+
 Có 3 loại địa chỉ IPv6:
 
 - Unicast( truyền điểm điểm): là địa chỉ cho một giao tiếp. Một gói dữ liệu được gửi đến một địa chỉ Unicast sẽ được phân phối tới cổng giao tiếp được chỉ ra bởi địa chỉ đó.
 
-- Anycast: là địa chỉ cho tập hợp các cổng giao tiếp. Các tập này thông thường thuộc về các node khác nhau. Một gói dữ liệu được gửi đến một địa chỉ anycast sẽ được phân phối đến cổng giao tiếp gần nhất hay đầu tiên trong nhóm anycast.
+- Anycast ( truyền ): là địa chỉ cho tập hợp các cổng giao tiếp. Các tập này thông thường thuộc về các node khác nhau. Một gói dữ liệu được gửi đến một địa chỉ anycast sẽ được phân phối đến cổng giao tiếp gần nhất hay đầu tiên trong nhóm anycast.
 
-- Multicast: địa chỉ cho một tập hợp các cổng giao tiếp (thông thường thuộc về các node khác nhau). Khi một gói được gửi đến một địa chỉ multicast, tất cả các cổng giao tiếp sẽ nhận được gói dữ liệu này.
+- Multicast ( truyền điểm- đa điểm): địa chỉ cho một tập hợp các cổng giao tiếp (thông thường thuộc về các node khác nhau). Khi một gói được gửi đến một địa chỉ multicast, tất cả các cổng giao tiếp sẽ nhận được gói dữ liệu này.
 
 lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
+
 
 
 
