@@ -51,6 +51,7 @@ Hỗ trợ tính năng multicast và anycast, giúp cho việc truyền tin trê
 ###     4.1. BIỂU DIỄN IP V6.
 
 ![hinh ](../images/1_cau_truc.png)
+
 IP v6 gồm 128 bit được chia thành 8 HEXTET. mỗi HEXTET là 16 bit ngăn cách nhau bởi dấu ":".
 
 **CÁCH THU GỌN ĐỊA CHỈ IP V6**:
@@ -61,6 +62,7 @@ IP v6 gồm 128 bit được chia thành 8 HEXTET. mỗi HEXTET là 16 bit ngăn
  - các số 0 đầu tiên trong một octet có thể được lược bỏ
 
  ví dụ:
+
  ![hinh](../images/2_vi_du.png)
 
 
@@ -88,6 +90,7 @@ phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần nà
 đây là cái hay nhất của IPV6 bởi IPv6 không có private IP, mà tất cả địa chỉ IPv6 đều là public IP.
 
 đề làm được điều này, phần host id phải là duy nhất. IPv6 dùng một cơ chế EUI-64. cơ chế này sẽ chuyển đổi địa chỉ MAC của máy host thành chính địa chỉ HOST ID.
+
 ![hinh ](../images/5_host_id.png)
 
 **CƠ CHẾ CHUYỂN ĐỔI ĐỊA CHỈ MAC THÀNH HOST ID**:
@@ -97,6 +100,7 @@ phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần nà
 - 3. đảo giá trị bit thứ 7 trong host id (ví dụ bit thứ 7 là 0 sẽ đảo ngược lại thành 1)
 
 ví dụ: 
+
 ![HINH ](../images/6_host_id.png)
 
 ## V. CÁC LOẠI ĐỊA CHỈ IPv6.
