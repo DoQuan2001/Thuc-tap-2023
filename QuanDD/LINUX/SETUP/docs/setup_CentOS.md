@@ -1,0 +1,4 @@
+# SETUP CENTOS TẠI VMWARE.
+
+## BƯỚC 1: TẢI ISO VỀ MÁY.
+
