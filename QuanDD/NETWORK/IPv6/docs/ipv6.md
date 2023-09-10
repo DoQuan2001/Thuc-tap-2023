@@ -68,20 +68,24 @@ IP v6 gồm 128 bit được chia thành 8 HEXTET. mỗi HEXTET là 16 bit ngăn
 
 ### 4.2. THÀNH PHẦN IP V6.
 
-IP V6 cũng giồm 2 phần: NET VÀ HOST.
+IP V6 cũng giồm 3 phần: PREFIX, SUBNETID VÀ HOST.
 
-![hinh ](../images/3_host_net.png)
+![hinh ](../images/8_thanh_phan.png)
 
 
-#### 4.2.1. PHẦN NET ID.
+
+Interface ID: có cấu trúc tương tự ID trong IPv4. Số này nhận dạng duy nhất một host riêng trong mạng. Interface ID (thứ mà đôi khi được cho như là một thẻ) được cấu hình tự động điển hình dựa vào địa chỉ MAC của giao diện mạng. ID giao diện có thể được cấu hình bằng định dạng EUI-64.
+
+
+#### 4.2.1. PHẦN NETID(LÀ PREFIX+ SUBNETID).
 
 phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần này như sau:
 
 ![hinh ](../images/4_quy-hoach.png)
 
-- /32 bít đầu là bit của nhà mạng ISP
-- /48 tới /64 đây là của nhà mạng ISP sẽ cấp cho bạn
-- bạn sẽ mang cái dải mạng này về để chia cho các máy trong phòng mình.
+Site prefix: là số được gán đến website bằng một ISP. Theo đó, tất cả máy tính trong cùng một vị trí sẽ được chia sẻ cùng một site prefix. Site prefix hướng tới dùng chung khi nó nhận ra mạng của bạn và cho phép mạng có khả năng truy cập từ Internet.
+
+Subnet ID: là thành phần ở bên trong trang web, được sử dụng với chức năng miêu tả cấu trúc trang của mạng. Một IPv6 subnet có cấu trúc tương đương với một nhánh mạng đơn như subnet của IPv4.
 
 - lúc này bạn chỉ cần quan tâm tới phần host là cái attach nó vào máy.
 
@@ -102,6 +106,14 @@ phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần nà
 ví dụ: 
 
 ![HINH ](../images/6_host_id.png)
+
+
+
+Ví dụ: Với một địa chỉ IPv6 có cấu trúc như sau: 2001:0f68:0000:0000:0000:0000:1986:69af, sẽ bao gồm:
+
+Site prefix: 2001:0f68:0000
+Subnet ID: 0000
+host ID: 0000:0000:1986:69af
 
 ## V. CÁC LOẠI ĐỊA CHỈ IPv6.
 

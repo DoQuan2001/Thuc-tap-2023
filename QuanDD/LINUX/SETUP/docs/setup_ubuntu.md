@@ -12,7 +12,7 @@ truy cập: https://ubuntu.com/download/desktop
 ![hinh ](../images/3_ubuntu.png).
 
 
-## BƯỚC 2: CÀI ĐẶT ISO UBNUNTU TẠI VMWARE.
+## BƯỚC 2: TẠO MÁY ẢO.
 
 
 ![hinh ](../images/4_ubuntu.png).
