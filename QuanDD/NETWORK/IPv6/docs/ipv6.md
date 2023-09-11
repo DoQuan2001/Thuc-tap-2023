@@ -119,15 +119,68 @@ host ID: 0000:0000:1986:69af
 
 ![hinh ](../images/7_ipv6_category.png)
 
+
+
+
 Có 3 loại địa chỉ IPv6:
 
 - Unicast( truyền điểm điểm): là địa chỉ cho một giao tiếp. Một gói dữ liệu được gửi đến một địa chỉ Unicast sẽ được phân phối tới cổng giao tiếp được chỉ ra bởi địa chỉ đó.
 
-- Anycast ( truyền ): là địa chỉ cho tập hợp các cổng giao tiếp. Các tập này thông thường thuộc về các node khác nhau. Một gói dữ liệu được gửi đến một địa chỉ anycast sẽ được phân phối đến cổng giao tiếp gần nhất hay đầu tiên trong nhóm anycast.
+- Anycast : là địa chỉ cho tập hợp các cổng giao tiếp. Các tập này thông thường thuộc về các node khác nhau. Một gói dữ liệu được gửi đến một địa chỉ anycast sẽ được phân phối đến cổng giao tiếp gần nhất hay đầu tiên trong nhóm anycast.
 
 - Multicast ( truyền điểm- đa điểm): địa chỉ cho một tập hợp các cổng giao tiếp (thông thường thuộc về các node khác nhau). Khi một gói được gửi đến một địa chỉ multicast, tất cả các cổng giao tiếp sẽ nhận được gói dữ liệu này.
 
+
+![hinh ](../images/9_cac_loai.png)
+
 lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
+
+### 5.1. ĐỊA CHỈ UNICAST
+
+Địa chỉ Unicast gồm có các loại khác nhau :
+
+**Global Unicast Address**: tương ứng với địa chỉ Public của IPv4, là loại địa chỉ được cho phép truy cập rộng rãi trên Internet, hỗ trợ việc định tuyến và đánh địa chỉ phân cấp. (do nhà mạng cấp)
+
+**Link-Local Address**: địa chỉ này được cấu hình một cách tự động trên interface của thiết bị. Địa chỉ này luôn bắt đầu với FE80. 16 bit đầu tiên của địa chỉ liên kết cục bộ luôn được đặt là 1111 1110 1000 0000 (FE80). 48 bit tiếp theo thì được đặt thành 0, do đó nó chỉ sử dụng để liên lạc giữa các máy chủ IPv6 trên một liên kết (phân đoạn quảng bá). Các địa chỉ này không thể định tuyến. Vì vậy, bộ định tuyến không bao giờ chuyển tiếp các địa chỉ này bên ngoài liên kết.
+
+**Site-Local Address**: tương tự như địa chỉ Private trong IPv4 (10.0.0.0/8,172.16.0.0/12 và 192.168.0.0/16), dùng trong nội bộ một site.
+
+**Unique-Local Address**: được sử dụng trong phạm vi toàn cầu, dùng để thay thế cho địa chỉ site-local.
+
+**Loopback address**: tương tự 127.0.0.1 trong ipv4. dùng để kiểm tra 
+
+
+### 5.2. ĐỊA CHỈ MULTICAST.
+
+-Luôn bắt đầu bằng FF.
+
+-Cờ(Flag): trường này có 4 bít “0T00”
+
++Bit T=0: đây là địa chỉ multicast IPv6 vĩnh viễn được IANA quy định
++Bit T=1: đây là dạng địa chỉ multicast không vĩnh viễn.
+
+-Phạm vi(Scope): trường này cũng gồm 4bit, dùng để xác định phạm vi của nhóm địa chỉ multicast, tùy thuộc vào giá trị mà phạm vi được xác định như sau:
+
++0001=1 : phạm vi Node
+
++0010=2 : phạm vi Link
+
++0101=5 : phạm vi Site
+
++1000=8 : phạm vi tổ chức(Organisation)
+
++1110=E : phạm vi toàn cầu(Global)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -162,3 +215,5 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 [2] https://www.totolink.vn/article/75-cau-truc-ipv6-va-cac-loai-dia-chi-ipv6.html
 
 [3] https://www.youtube.com/watch?v=1RrV4wHke18
+
+[4] https://maychuviet.vn/cau-truc-ipv6/
