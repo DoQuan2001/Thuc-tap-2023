@@ -4,9 +4,11 @@
 
 [I. IPv6 LÀ GÌ?](#i-ipv6-là-gì)
 
-[II. MỤC ĐÍCH TẠO RA IP V6.](#ii-mục-đích-tạo-ra-ip-v6)
 
-[III. LỢI ÍCH KHI SỬ DỤNG IP V6.](#iii-lợi-ích-khi-sử-dụng-ip-v6)
+
+[II. LỢI ÍCH KHI SỬ DỤNG IP V6.](#ii-lợi-ích-khi-sử-dụng-ip-v6)
+
+[III. IPv6 DATAGRAM](#iii-ipv6-datagram)
 
 [IV. CẤU TRÚC IPv6.](#iv-cấu-trúc-ipv6)
 
@@ -23,15 +25,17 @@
 
 
 
+
+
+
 ## I. IPv6 LÀ GÌ?
 
 IPv6 là phiên bản tiếp theo của giao thức Internet Protocol (IP), mà được sử dụng để điều hướng gói tin trên mạng Internet. Nó được thiết kế để thay thế cho IPv4, giao thức hiện tại được sử dụng rộng rãi nhất trên thế giới.
 
-## II. MỤC ĐÍCH TẠO RA IP V6.
 
 IPv6 được sử dụng để giải quyết vấn đề về _hạn chế số lượng địa chỉ IP có sẵn trong IPv4_. Vì IPv4 chỉ có khoảng 4,3 tỷ địa chỉ khả dụng, nên không thể đáp ứng được nhu cầu của các thiết bị mới đang liên tục được kết nối vào Internet. IPv6 cung cấp hàng tỷ lượng địa chỉ IP khổng lồ hơn, do đó có thể đáp ứng tốt hơn nhu cầu của thiết bị mới và các hệ thống không dây.
 
-## III. LỢI ÍCH KHI SỬ DỤNG IP V6.
+## II. LỢI ÍCH KHI SỬ DỤNG IP V6.
 
 Để hình dung rõ hơn lợi ích IPv6 mang lại, chúng ta sẽ đến với những công dụng sau đây của IPv6:
 
@@ -45,6 +49,14 @@ Hỗ trợ tính năng multicast và anycast, giúp cho việc truyền tin trê
 - Giúp cho việc triển khai các dịch vụ mạng mới và nâng cao hiệu suất mạng hiệu quả hơn.
 
 - Hỗ trợ các thiết bị không dây và các hệ thống không dây, giúp cho việc kết nối và trao đổi dữ liệu trên mạng không dây được thuận tiện hơn.
+
+
+## III. IPV6 DATAGRAM.
+
+![hinh ](../images/11_IPV6_diagram.png)
+
+![hinh ](../images/12_IPV6_header.png)
+
 
 ## IV. CẤU TRÚC IPv6.
 
@@ -152,6 +164,8 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 
 ### 5.2. ĐỊA CHỈ MULTICAST.
 
+CHỨC NĂNG TƯƠNG TỰ NHƯ DẢI MẠNG D CỦA BÊN IPV4 DẢI MÀ TỪ 224.0.0.0
+
 -Luôn bắt đầu bằng FF.
 
 -Cờ(Flag): trường này có 4 bít “0T00”
@@ -179,43 +193,60 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 
 **Multicast Site-Local**:(đã bị thay thế bởi cái multicast global) Địa chỉ Multicast Site-Local bắt đầu với tiền tố FF05::/16. Đây là loại Multicast được sử dụng trong phạm vi mạng trang web (site-local) và được chuyển tiếp trong cùng một trang web. Tuy nhiên, loại Multicast này đã bị loại bỏ trong các phiên bản gần đây của giao thức IPv6.
 
+---
+***SUMMARY***
+
+![hinh ](../images/7_ipv6_category.png)
+
+```
+- Well-known Multicast.
+
+     - Tất cả các địa chỉ multicast phổ biến đều bắt đầu bằng tiền tố ff00::/12.
+     - Chúng có chức năng tương tự như 224.0.0.0/24 trong IPv4.
+
+- Solicited-Node Multicast.
+
+     - Mỗi địa chỉ unicast IPv6 có một địa chỉ multicast nút được yêu cầu tương ứng.
+     - Cấu trúc bao gồm tiền tố cố định FF02::1:FF00:0/104 và 24 bit cuối cùng của địa chỉ IPv6 tương ứng.
+     - Các nhóm multicast đặc biệt này được sử dụng để phân giải địa chỉ, phát hiện hàng xóm và phát hiện địa chỉ trùng lặp.
+
+- Global Unicast
+
+     - Hiện tại, IANA phân bổ các địa chỉ unicast toàn cầu bắt đầu bằng giá trị nhị phân 001 (2000::/3).
+     - Cấu trúc của chúng bao gồm tiền tố định tuyến toàn cầu 48 bit và ID mạng con 16 bit còn được gọi là Bộ tổng hợp cấp độ trang web (SLA).
+     - Cấu trúc của các địa chỉ này cho phép tổng hợp các mục định tuyến để đạt được bảng định tuyến IPv6 toàn cầu nhỏ hơn.
 
 
+- Unique-local
+     - Nó có một tiền tố duy nhất trên toàn cầu tương tự như các địa chỉ unicast toàn cầu.
+
+     - Đây là không gian địa chỉ độc lập của Nhà cung cấp dịch vụ Internet
+
+- Loopback
+     - Địa chỉ loopback nổi tiếng trong IPv6 là ::1/128.
+     - Khái niệm tương tự như 127.0.0.0/8 trong IPv4.
+     - Thường được sử dụng để kiểm tra ngăn xếp giao thức TCP/IP trong hệ điều hành.
+
+- Unspecified
+
+     - Địa chỉ không xác định trong IPv6 là ::/128.
+     - Khái niệm tương tự như 0.0.0.0 trong IPv4
+
+- Link-local 
+
+     - tiền tố FE80::/10.
+     - Tự động được gán cho bất kỳ giao diện hỗ trợ IPv6 nào.
+     - Tương tự như 169.254.0.0/16 trong IPv4.
+     - Không thể định tuyến được. Chúng chỉ có giá trị trong phạm vi của một giao diện.
+     - Được sử dụng để khám phá hàng xóm và tự động cấu hình không trạng thái.
+
+- Embedded IPv4-in-IPv6
+
+     - Địa chỉ IPv4 A.B.C.D (bằng chữ số hex) được nhúng trong IPv6 dưới dạng 0:0:0:0:0:0:A:B:C:D hoặc chỉ ::A:B:C:D.
+     - Địa chỉ IPv6 được sử dụng trong các đường hầm tự động hỗ trợ cả IPv4 và IPv6.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
@@ -232,3 +263,5 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 [4] https://maychuviet.vn/cau-truc-ipv6/
 
 [5] https://viblo.asia/p/tim-hieu-ve-ipv6-3P0lPyDG5ox
+
+[6] https://www.networkacademy.io/ccna/ipv6/ipv6-address-types
