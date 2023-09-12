@@ -172,6 +172,18 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 +1110=E : phạm vi toàn cầu(Global)
 
 
+-Một số địa chỉ thường gặp:
+
+
+Tất cả các thiết bị IPv6: ff02::1
+Tất cả các bộ định tuyến IPv6: ff02::2
+Tất cả các bộ định tuyến OSPFv3: ff02::5
+Tất cả các bộ định tuyến EIGRP (IPv6): ff02::a
+
+
+
+
+
 
 
 
@@ -217,3 +229,5 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 [3] https://www.youtube.com/watch?v=1RrV4wHke18
 
 [4] https://maychuviet.vn/cau-truc-ipv6/
+
+[5] https://viblo.asia/p/tim-hieu-ve-ipv6-3P0lPyDG5ox
