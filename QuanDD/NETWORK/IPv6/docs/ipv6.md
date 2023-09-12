@@ -172,13 +172,14 @@ lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 +1110=E : phạm vi toàn cầu(Global)
 
 
--Một số địa chỉ thường gặp:
+
+**Multicast Link-Local**: Địa chỉ Multicast Link-Local bắt đầu với tiền tố FF02::/16. Đây là loại Multicast được sử dụng trong phạm vi mạng cục bộ (link-local) và chỉ được chuyển tiếp qua các router trên cùng một mạng cục bộ. Địa chỉ Multicast Link-Local quan trọng trong việc thực hiện các giao thức mạng như NDP (Neighbor Discovery Protocol) và DHCPv6 (Dynamic Host Configuration Protocol for IPv6).
+
+**Multicast Global**: Địa chỉ Multicast Global bắt đầu với tiền tố FF0E::/16. Đây là loại Multicast được sử dụng trong phạm vi toàn cầu và có thể được chuyển tiếp qua các router trên mạng Internet. Địa chỉ Multicast Global được sử dụng cho các ứng dụng nhóm như streaming video, IPTV, và phân phối nội dung trên mạng IPv6.
+
+**Multicast Site-Local**:(đã bị thay thế bởi cái multicast global) Địa chỉ Multicast Site-Local bắt đầu với tiền tố FF05::/16. Đây là loại Multicast được sử dụng trong phạm vi mạng trang web (site-local) và được chuyển tiếp trong cùng một trang web. Tuy nhiên, loại Multicast này đã bị loại bỏ trong các phiên bản gần đây của giao thức IPv6.
 
 
-Tất cả các thiết bị IPv6: ff02::1
-Tất cả các bộ định tuyến IPv6: ff02::2
-Tất cả các bộ định tuyến OSPFv3: ff02::5
-Tất cả các bộ định tuyến EIGRP (IPv6): ff02::a
 
 
 
