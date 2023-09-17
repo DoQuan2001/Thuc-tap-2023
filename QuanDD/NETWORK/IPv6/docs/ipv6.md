@@ -89,7 +89,7 @@ IP V6 cũng giồm 3 phần: PREFIX, SUBNETID VÀ HOST.
 Interface ID: có cấu trúc tương tự ID trong IPv4. Số này nhận dạng duy nhất một host riêng trong mạng. Interface ID (thứ mà đôi khi được cho như là một thẻ) được cấu hình tự động điển hình dựa vào địa chỉ MAC của giao diện mạng. ID giao diện có thể được cấu hình bằng định dạng EUI-64.
 
 
-#### 4.2.1. PHẦN NETID(LÀ PREFIX+ SUBNETID).
+#### 4.2.1. PHẦN NETID(LÀ SITE PREFIX+ SUBNETID).
 
 phần net ID này do nhà mạng cấp, nhà mạng sẽ quy hoạch phần này như sau:
 
@@ -127,9 +127,34 @@ Site prefix: 2001:0f68:0000
 Subnet ID: 0000
 host ID: 0000:0000:1986:69af
 
+
+#### 4.2.3. prefix-length.
+
+Độ dài tiền tố là giá trị thập phân cho thấy số bit ngoài cùng bên trái của địa chỉ là phần mạng.
+
+VÍ DỤ:  Hãy lấy 2001:aaaa:bbbb:cccc:0:0:0:10/64 làm ví dụ. Độ dài mặt nạ mạng là 64 có nghĩa là mạng con IPv6 là 2001:aaaa:bbbb:cccc::/64 và 2001:aaaa:bbbb:cccc::10 là một nút trong mạng con này. 
+
+
+Thông thường trong IPv6, các kỹ sư chọn độ dài tiền tố là bội số của 4. Điều đó làm cho tiền tố dễ hiểu hơn mà không cần sử dụng máy tính mạng con.
+
+![hinh ](../images/14_prefix.png)
+
+![hinh ](../images/13_prefix.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## V. CÁC LOẠI ĐỊA CHỈ IPv6.
 
-![hinh ](../images/7_ipv6_category.png)
 
 
 
@@ -142,8 +167,8 @@ Có 3 loại địa chỉ IPv6:
 
 - Multicast ( truyền điểm- đa điểm): địa chỉ cho một tập hợp các cổng giao tiếp (thông thường thuộc về các node khác nhau). Khi một gói được gửi đến một địa chỉ multicast, tất cả các cổng giao tiếp sẽ nhận được gói dữ liệu này.
 
-
 ![hinh ](../images/9_cac_loai.png)
+
 
 lưu ý: IPV6 không dùng địa chỉ broadcast và không dùng subnetmask.
 
@@ -187,11 +212,7 @@ CHỨC NĂNG TƯƠNG TỰ NHƯ DẢI MẠNG D CỦA BÊN IPV4 DẢI MÀ TỪ 224
 
 
 
-**Multicast Link-Local**: Địa chỉ Multicast Link-Local bắt đầu với tiền tố FF02::/16. Đây là loại Multicast được sử dụng trong phạm vi mạng cục bộ (link-local) và chỉ được chuyển tiếp qua các router trên cùng một mạng cục bộ. Địa chỉ Multicast Link-Local quan trọng trong việc thực hiện các giao thức mạng như NDP (Neighbor Discovery Protocol) và DHCPv6 (Dynamic Host Configuration Protocol for IPv6).
 
-**Multicast Global**: Địa chỉ Multicast Global bắt đầu với tiền tố FF0E::/16. Đây là loại Multicast được sử dụng trong phạm vi toàn cầu và có thể được chuyển tiếp qua các router trên mạng Internet. Địa chỉ Multicast Global được sử dụng cho các ứng dụng nhóm như streaming video, IPTV, và phân phối nội dung trên mạng IPv6.
-
-**Multicast Site-Local**:(đã bị thay thế bởi cái multicast global) Địa chỉ Multicast Site-Local bắt đầu với tiền tố FF05::/16. Đây là loại Multicast được sử dụng trong phạm vi mạng trang web (site-local) và được chuyển tiếp trong cùng một trang web. Tuy nhiên, loại Multicast này đã bị loại bỏ trong các phiên bản gần đây của giao thức IPv6.
 
 ---
 ***SUMMARY***
@@ -265,3 +286,5 @@ CHỨC NĂNG TƯƠNG TỰ NHƯ DẢI MẠNG D CỦA BÊN IPV4 DẢI MÀ TỪ 224
 [5] https://viblo.asia/p/tim-hieu-ve-ipv6-3P0lPyDG5ox
 
 [6] https://www.networkacademy.io/ccna/ipv6/ipv6-address-types
+
+[7] https://www.quora.com/What-is-the-range-of-global-unicast-address-in-ipv6
