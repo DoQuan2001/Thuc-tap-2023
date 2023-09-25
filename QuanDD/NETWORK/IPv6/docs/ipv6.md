@@ -57,6 +57,15 @@ Hỗ trợ tính năng multicast và anycast, giúp cho việc truyền tin trê
 
 ![hinh ](../images/12_IPV6_header.png)
 
+- Payload: Thông thường, nó có thể lên đến 65535 byte. Trong IPv6, PDU thường bao gồm độ dài của nó và Header của giao thức bậc cao, trong khi Extension chứa thông tin về dịch vụ đính kèm và nếu chuyển sang trường khác, nó có thể có hoặc không.
+- Version: bao gồm 4 bit có chức năng xác định phiên bản của giao thức.
+- Traffic Class: Gồm 8 bit được sử dụng nhằm xác định loại lưu lượng.
+- Flow label: 20 bit cho mỗi giá của luồng dữ liệu
+- Payload Length: 16 bit (số dương). Hỗ trợ xác định kích thước của phần tải theo sau Header IPv6.
+- Next-Header: 8 bit giúp xác định Header tiếp theo của gói tin.
+- Hop Limit: 8 bit (số dương). Giá trị này giảm đi một đơn vị qua mỗi Node (giảm xuống 0, gói tin bị loại bỏ).
+- Source address Địa chỉ IPv6 nguồn của gói được mang theo 128 bit
+
 
 ## IV. CẤU TRÚC IPv6.
 
@@ -267,7 +276,10 @@ CHỨC NĂNG TƯƠNG TỰ NHƯ DẢI MẠNG D CỦA BÊN IPV4 DẢI MÀ TỪ 224
      - Địa chỉ IPv6 được sử dụng trong các đường hầm tự động hỗ trợ cả IPv4 và IPv6.
 
 
+
+
 ```
+
 
 
 
