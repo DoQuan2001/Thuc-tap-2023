@@ -7,18 +7,13 @@
 
 [II. TRUYỀN THÔNG IPV6 VS IPV6 TRÊN HẠ TẦNG CỦA IPV4.](#ii-truyền-thông-ipv6-vs-ipv6-trên-hạ-tầng-của-ipv4)
 
-[III. NAT-PT](#iii-nat-pt)
 
 
 ---
 
  Do số lượng IPv6 rất lớn cũng như thói quen, cách dùng IPv4 đã quá phổ biến, vì vậy việc chuyển đối từ IPv4 sang IPv6 không được đột ngột và phải làm sao không để sảy ra bất kỳ xung đột của hệ thống nào.
 
- ĐƯỜNG HẦM: IPV6 TO IPV6
 
- NAT: IPV6 TO IPV4
-
- DUAL STACK: CẢ 2 MODE TRÊN.
 
 
 
@@ -102,18 +97,6 @@ Công nghệ đường hầm là một phương pháp sử dụng cơ sở hạ 
 - Chỉ thực hiện với một lớp địa chỉ mạng đặc biệt.
 Có nguy cơ bị tấn công theo kiểu của đường hầm tự động nếu phần địa chỉ
 
-
-## III. NAT-PT
-
-cho phép chuyển đổi IPv6 to IPv4 và ngược lại.
-
-### 3.1. CƠ CHẾ HOẠT ĐỘNG.
-
-![hinh ](../images/20_NAT.png)
-
-NAT-PT sẽ có 1 số địa chỉ IP của mình.
-
-Các gói tin IPv4 to IPv6 sẽ phải đi qua 1 bộ NAT_PT. địa chỉ IPv4 sẽ được chuyển sang địa chỉ IPv6 là một trong số địa chỉ IPv6 nằm trong NAT_PT. 
 
 
 
