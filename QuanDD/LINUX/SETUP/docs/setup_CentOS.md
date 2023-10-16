@@ -10,7 +10,7 @@ Truy cập: https://www.centos.org/download/
 ## BƯỚC 3: SETUP KHI ĐÃ TẠO MÁY ẢO SONG
 ![hinh ](../images/1_centos.png).
 ![hinh ](../images/2_centos.png).
-![hinh ](../images/3_centos.png).
+
 ![hinh ](../images/4_centOS.png).
 
 
