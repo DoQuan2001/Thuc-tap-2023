@@ -119,14 +119,17 @@ Kết nối internet thông qua cạc mạng vật lý và có chung lớp mạn
 
 Ưu điểm:
 
-- Bảo mật: NAT ẩn địa chỉ IP nội bộ của các máy ảo và chỉ hiển thị địa chỉ IP của máy chủ vật lý. Điều này giúp bảo vệ mạng nội bộ khỏi các cuộc tấn công từ bên ngoài.
-- Chia sẻ kết nối internet: NAT cho phép máy ảo chia sẻ kết nối internet của máy chủ vật lý.
-- Thiết lập dễ dàng: Cấu hình NAT khá đơn giản và dễ thực hiện trên VMware.
+- Truy cập từ bên ngoài: Máy ảo được kết nối qua Bridge có thể truy cập từ bên ngoài mạng nội bộ và có địa chỉ IP riêng.
+
+- Khả năng tương thích: Bridge cho phép máy ảo kết nối trực tiếp với mạng vật lý và nhận địa chỉ IP từ router hoặc DHCP server trong mạng.
+
+- Tích hợp dễ dàng: Máy ảo kết nối qua Bridge có thể được nhìn thấy như các máy tính vật lý trên mạng.
 
 Nhược điểm:
 
-- Giới hạn truy cập từ bên ngoài: Máy ảo được kết nối qua NAT không thể truy cập từ bên ngoài mạng nội bộ.
-- Giới hạn số lượng máy ảo: Số lượng máy ảo được kết nối thông qua NAT có thể bị giới hạn bởi các cấu hình mạng
+- Bảo mật: Máy ảo kết nối qua Bridge có thể gặp rủi ro bảo mật hơn so với NAT, vì nó có địa chỉ IP riêng và có thể truy cập trực tiếp vào mạng nội bộ.
+
+- Địa chỉ IP công cộng: Máy ảo kết nối qua Bridge cần có một địa chỉ IP công cộng sẵn có trong mạng.
 
 
 ### 3.2. PING VITRUAL MACHINE CARD NETWORK BRIDGED TO PHYSICAL MACHINE.
