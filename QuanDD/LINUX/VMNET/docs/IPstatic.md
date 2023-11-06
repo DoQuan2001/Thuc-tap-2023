@@ -39,7 +39,6 @@ dùng một trong số các lệnh sau:
 
 - *ip addr*
 
-- *ifconfig*:(chỉ dùng cho một vài bản centos7 có netcad)
 
 ![hinh ](../images/1_ipaddr.png)
 
