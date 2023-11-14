@@ -1,0 +1,7 @@
+# CONFIG IP STATIC ON UBUNTU.
+
+
+## MỤC LỤC
+
+
+## I. SỬ DỤNG SU
