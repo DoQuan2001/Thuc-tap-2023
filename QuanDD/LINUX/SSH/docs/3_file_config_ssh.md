@@ -60,6 +60,14 @@ PubkeyAuthentication: Sử dụng chứng thực bằng SSH key , thay vì mật
 
 ![hinh ](../images/6.png)
 
+### 1.6. AuthorizedKeysFile
+
+AuthorizedKeysFile: Đường dẫn tới file key
+
+![hinh ](../images/21.png)
+
+### 1.7. 
+
 
 
 
