@@ -1,7 +1,5 @@
 # CHI TIẾT VỀ MÃ HÓA.
 
-## MỤC LỤC:
-
 
 
 Có 2 công nghệ mã hóa khác nhau được SSH sử dụng:

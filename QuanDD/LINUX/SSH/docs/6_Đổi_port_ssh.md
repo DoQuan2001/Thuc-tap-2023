@@ -35,7 +35,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Biến cổng SSH mới
-NEW_SSH_PORT=${-"22"} // tạo biến mặc định nhỡ quên nó tự đổi về 22.
+NEW_SSH_PORT=${1:-"22"} // tạo biến mặc định nhỡ quên nó tự đổi về 22.
 
 # Tạo bản sao lưu của tệp cấu hình SSH
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
