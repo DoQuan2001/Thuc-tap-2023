@@ -29,8 +29,10 @@ ListenAddress: địa chỉ IP của interface cấu hình lắng nghe kết n�
 
 HostKey: Xác định các khóa chủ (host key) được sử dụng bởi máy chủ SSH. có các khóa RSA, ECDSA, và Ed25519...
 
-
 ![hinh ](../images/3.png)
+
+
+***Lưu ý: sau khi đổi port phải restart dịch vụ ssh nha***
 
 
 ### 1.3. SyslogFạclity & Loglevel.
@@ -62,11 +64,11 @@ PubkeyAuthentication: Sử dụng chứng thực bằng SSH key , thay vì mật
 
 ### 1.6. AuthorizedKeysFile
 
-AuthorizedKeysFile: Đường dẫn tới file key
+AuthorizedKeysFile: Đường dẫn tới file key. 
 
 ![hinh ](../images/21.png)
 
-### 1.7. 
+
 
 
 

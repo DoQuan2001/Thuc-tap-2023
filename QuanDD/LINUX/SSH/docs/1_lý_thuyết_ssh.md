@@ -1,6 +1,5 @@
 # SSH SERVICE.
 
-# Tìm hiểu về SSH
 ## 1. SSH là gì ?
 
 
@@ -62,7 +61,9 @@ Giao thức SSH (Secure Shell) bao gồm nhiều thành phần khác nhau để 
 
 Các thành phần này cùng hoạt động để đảm bảo tính bảo mật và hiệu suất của kết nối SSH khi người dùng truy cập máy chủ từ xa.
 
-## 5. CƠ CHẾ HOẠT ĐỘNG
+## 5. CƠ CHẾ HOẠT ĐỘNG.
+
+![hinh ](../images/22.jpg)
 
 Bao gồm các bước sau đây:
 
@@ -88,8 +89,6 @@ Cơ chế hoạt động của SSH đảm bảo tính bảo mật cao khi truy�
 - Key bao gồm một public key (khóa công khai) và private key (khóa bí mật) được lưu trữ trên máy chủ và thiết bị của người dùng. Khi thiết lập kết nối SSH, public key được gửi đến máy chủ để xác thực người dùng, sau đó private key được sử dụng để giải mã kết nối SSH. 
 #### 6.2. THÀNH PHẦN.
 
-![hinh ](../images/18.png.crdownload)
-
 Khi tạo SSH Key thì sẽ có 3 thành phần quan trọng:
 
 1. **Public Key**: Là phần được sao chép và đưa vào file `authorized_keys` trên server để xác thực cho quá trình đăng nhập vào server bằng SSH. Public Key này có thể được lưu dưới dạng file hoặc chuỗi ký tự.
@@ -97,6 +96,9 @@ Khi tạo SSH Key thì sẽ có 3 thành phần quan trọng:
 2. **Private Key**: Là phần được lưu trữ trên máy tính của người dùng để xác thực cho quá trình đăng nhập vào server bằng SSH. Private Key này cần được bảo mật và không được chia sẻ với bất kỳ ai khác. Private Key cũng có thể được lưu dưới dạng file hoặc chuỗi ký tự.
 
 3. **Passphrase**: Là mật khẩu được sử dụng để mã hóa Private Key và bảo vệ nó khỏi các cuộc tấn công. Passphrase này được yêu cầu khi người dùng đăng nhập vào server bằng SSH và cần được ghi nhớ để tránh mất Private Key.
+
+
+#### 6.3. CÁCH HOẠT ĐỘNG.
 
 SSH key hoạt động bằng cách sử dụng cặp key gồm Public Key và Private Key. Khi người dùng đăng nhập vào một server thông qua SSH key, thay vì phải nhập mật khẩu, máy chủ yêu cầu người dùng cung cấp Public Key tương ứng với Private Key đã được lưu trữ trước đó trên máy tính của người dùng.
 
