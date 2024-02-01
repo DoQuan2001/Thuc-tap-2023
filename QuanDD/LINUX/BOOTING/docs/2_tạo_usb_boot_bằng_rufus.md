@@ -53,6 +53,14 @@ VÀO LẠI Ổ USB TRÊN MÁY TÍNH. THẤY NÓ XUẤT HIỆN NHƯ NÀY LÀ OKE.
 
 
 
+## II CÀI ĐẶT HỆ ĐIỀU HÀNH CHO MÁY TÍNH TỪ USB.
+
+### BƯỚC 1: KHỞI ĐỘNG LẠI MÁY TÍNH
+khi khởi động lại máy tính, trước khi nó lên hệ điều hành, cần nhấn F12 nhiều lần cho tới khi nó xuất hiện màn hình booting
+
+
+
+
 
 
 
